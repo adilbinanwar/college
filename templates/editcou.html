@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-warning">
+
+    <div class="container h-100 w-50 mt-5 bg-light p-4" style="border-radius: 10px;">
+        <h2 class=""><u>Edit Course!</u></h2>
+        <form action="{% url 'couedit' cou.id %}" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="">Course Name:</label>
+                <input type="text" class="form-control" name="Course" id="" value="{{cou.coursename}}" placeholder="Enter Course Name">
+            </div>
+            <div class="form-group">
+                <label for="">Fees:</label>
+                <input type="number" class="form-control" id="" name="Fees" value="{{cou.fees}}" placeholder="Enter Fees">
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+                <button type="button" class="btn btn-secondary"><a href="{% url 'showcou' %}" class="text-white">Cancel</a></button>
+        </form>
+    </div>
+    
+</body>
+</html>

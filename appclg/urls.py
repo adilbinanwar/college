@@ -1,0 +1,30 @@
+from django.urls import path
+from . import views
+
+urlpatterns=[
+    path('', views.home, name='home'),
+    path('loginpage', views.loginpage, name='loginpage'),
+    path('loginfun', views.loginfun, name='loginfun'),
+    path('logoutfun', views.logoutfun, name='logoutfun'),
+    path('adminpage', views.adminpage, name='adminpage'),
+    path('regcourse', views.regcourse, name='regcourse'),
+    path('stdreg', views.stdreg, name='stdreg'),
+    path('addstd', views.addstd, name='addstd'),
+    path('show', views.show, name='show'),
+    path('showcou', views.showcou, name='showcou'),
+    path('showtchr', views.showtchr, name='showtchr'),
+    path('editstd/<int:s>', views.editstd, name='editstd'),
+    path('edit/<int:s>', views.edit, name='edit'),
+    path('editcou/<int:c>', views.editcou, name='editcou'),
+    path('couedit/<int:c>', views.couedit, name='couedit'),
+    path('edit/<int:s>', views.edit, name='edit'),
+    path('delete/<int:s>', views.delete, name='delete'),
+    path('deletecou/<int:c>', views.deletecou, name='deletecou'),
+    path('deletetchr/<int:t>', views.deletetchr, name='deletetchr'),
+    path('signuppage', views.signuppage, name='signuppage'),
+    path('createtchr', views.createtchr, name='createtchr'),
+    path('userpage', views.userpage, name='userpage'),
+    path('view', views.view, name='view'),
+    path('tchredit', views.tchredit, name='tchredit'),
+    path('edittchr/<int:t>', views.edittchr, name='edittchr'),
+]
